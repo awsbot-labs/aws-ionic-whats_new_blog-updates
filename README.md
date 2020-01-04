@@ -1,7 +1,9 @@
 # aws-ionic-whats_new_blog-updates
 A Ionic mobile app to display information from a DynamoDB table containing blog posts from the AWS What's New blog.
 
-Relies on the RSS and mobile push lambda functions. For reference only.
+Relies on the RSS and mobile push lambda functions. 
+
+*Contains Security vulnerabilities For reference only.*
 
 
 ## Ionic AWS Starter
