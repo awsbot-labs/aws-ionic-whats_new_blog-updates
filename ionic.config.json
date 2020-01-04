@@ -1,0 +1,7 @@
+{
+  "name": "aws-ionic-starter",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

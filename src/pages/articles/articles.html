@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>AWS Updates</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+    <ion-list *ngIf="items">
+		<ion-item-sliding *ngFor="let item of items">
+	    <button ion-item  (click)="itemTapped($event, item)">
+	      <h2><b>{{item.title}}</b></h2>
+	      <p>Published in {{item.channel_title}} on {{item.published | date}}</p>
+	    </button>
+	    <ion-item-options side="right">
+	      <button ion-button color="secondary" (click)="itemDelete($event, item)">
+	        <ion-icon name="check-mark"></ion-icon>
+						Read
+	      </button>
+	    </ion-item-options>
+    </ion-item-sliding>
+	  </ion-list>
+</ion-content>
